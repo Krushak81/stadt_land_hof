@@ -1,0 +1,336 @@
+<!DOCTYPE HTML><head>
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/splash/splash-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/splash/splash-icon-big.png">
+<link rel="apple-touch-startup-image" href="img/splash/splash-screen.png" 	media="screen and (max-device-width: 320px)" />  
+<link rel="apple-touch-startup-image" href="img/splash/splash-screen@2x.png" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" /> 
+<link rel="apple-touch-startup-image" href="img/splash/splash-screen-six.png" media="(device-width: 375px)">
+<link rel="apple-touch-startup-image" href="img/splash/splash-screen-six-plus.png" media="(device-width: 414px)">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
+
+
+
+<title>Regionale Suche</title>
+
+
+
+
+
+<link href="css/style.css"     		 rel="stylesheet" type="text/css">
+<link href="css/framework.css" 		 rel="stylesheet" type="text/css">
+<link href="css/bootstrap/bootstrap.min.css" 		 rel="stylesheet" type="text/css">
+<link href="css/owl.theme.css" 		 rel="stylesheet" type="text/css">
+<link href="css/swipebox.css"		 rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css"	 rel="stylesheet" type="text/css">
+<link href="css/animate.css"			 rel="stylesheet" type="text/css">
+<link href="css/custom.css"			 rel="stylesheet" type="text/css">
+<link href="css/swiper.css"			 rel="stylesheet" type="text/css">
+
+
+    <!--   Muss noch lokal eingebunden werden!!  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="scripts/jquery.js"></script>-->
+
+ <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+ <script type="text/javascript" src="js/framework.plugins.js"></script>
+ <script type="text/javascript" src="js/custom.js"></script>
+ <script type="text/javascript" src="js/card-slider.js"></script>
+ <script type="text/javascript" src="js/swiper.min.js"></script>
+ <script type="text/javascript" src="js/searchSuggestions.js"></script>
+
+
+
+
+
+ </head>
+ <body>
+
+ <div id="preloader">
+     <div id="status">
+         <p class="center-text">
+             Loading the content...
+             <em>Loading depends on your connection speed!</em>
+         </p>
+     </div>
+ </div>
+
+ <div class="hide-content"></div>
+ <div class="all-elements">
+     <div class="snap-drawers">
+         <!-- Left Sidebar -->
+        <div class="snap-drawer snap-drawer-left">
+            <a href="index.html"  class="selected-item"><i class="fa fa-home"></i>Home</a>
+            <a href="#"><i class="fa fa-heart"></i>Favoriten</a>
+            <a href="rezepte.html"><i class="fa fa-book"></i>Rezepte</a>
+            <a href="#"><i class="fa fa-comment"></i>Laden vorschlagen</a>
+            <a href="#"><i class=""></i></a>
+            <a href="#"><i class="fa fa-envelope-o"></i>Kontakt</a>
+           <!-- <a href="#"><i class="fa fa-facebook"></i>Like Us</a>
+            <a href="#"><i class="fa fa-twitter"></i>Follow Us</a>
+            <a href="#"><i class="fa fa-google-plus"></i>Follow us</a>
+            <a href="#" class="show-share-bottom"><i class="fa fa-retweet"></i>Share</a>-->
+            <a href="#" class="sidebar-close"><i class="fa fa-times"></i>Close</a>
+        </div>
+    </div>
+    
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="searchMenu" data-toggle="modal" data-target="#searchModal">
+                        <i class="fa fa-search" id="searchIcon"></i>
+                        <input type="text" ng-model="searchText" id="searchBar" placeholder="Gib z.&nbsp;B. „Offenburg“ ein"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------Search-Modal------------------->
+
+
+    <div class="modal fade search-modal" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog search-modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="row search-modal-header">
+                    <div class="col search-modal-col search-modal-col-left">
+                        <button type="button" class="search-modal-close-button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="col search-modal-col search-modal-col-center" id="">
+                        <div class="search-modal-title">
+                            <span>Regionale Suche</span>
+                        </div>
+                    </div>
+                    <div class="col search-modal-col search-modal-col-right">
+                        <div class="search-modal-title">
+                            <button type="button" class="search-modal-delete" aria-disabled="false" aria-busy="false">
+                                <span>Löschen</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            <!--    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>-->
+                <div class="modal-body">
+                    <div class="test">
+                        <form action="search-results.html" method="get">
+                            <label class="search-label" for="SearchBarLocations">Reiseziel</label>
+                            <div dir="ltr">
+                                <div class="search-modal-searchbar_1">
+                                    <div class="search-modal-searchbar_2">
+                                        <input type="text" autocomplete="on" class="typeahead search-modal-searchbar-text" id="SearchBarLocations" name="query" placeholder="Gib z.&nbsp;B. „Offenburg“ ein" value="" autofocus>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="footer-ball"><i class="fa fa-navicon"></i></a>
+    
+    <!-- Page Content-->
+    <div id="content" class="snap-content">        
+        <div class="header-clear"></div>
+
+
+        <!----------------- SLIDER ALT------------------->
+
+       <!-- <div class="slider-container full-bottom">
+            <div class="homepage-slider" data-snap-ignore="true">
+                <div>
+                    <div class="overlay"></div>
+                    <div class="homepage-slider-caption homepage-left-caption">
+                        <h3>Offenburger Wochenmarkt</h3>
+                        <p>Jeden Dienstag und Samstag von 9:00-14:00 Uhr</p>
+                    </div>
+                    <img src="img/test/test1.jpg" class="responsive-image" alt="img">
+                </div>
+                <div>
+                    <div class="overlay"></div>
+                    <div class="homepage-slider-caption homepage-center-caption">
+                        <h3>Slider</h3>
+                        <p>Our slider is awesome!</p>
+                    </div>
+                    <img src="img/pictures/5.jpg" class="responsive-image" alt="img">
+                </div>
+                <div>
+                    <div class="overlay"></div>
+                    <div class="homepage-slider-caption homepage-right-caption">
+                        <h3>Responsive</h3>
+                        <p>And it's fully responsive!</p>
+                    </div>
+                    <img src="img/pictures/6.jpg" class="responsive-image" alt="img">
+                </div>
+            </div>
+        </div>-->
+
+
+        <!----------------- SWIPER cool aber geht nicht------------------->
+
+<!--
+                <ul class="card-container">
+                    <li class="card" data-index="0">1</li>
+                    <li class="card prev" data-index="1">2</li>
+                    <li class="card active" data-index="2">3</li>
+                    <li class="card next" data-index="3">4</li>
+                    <li class="card" data-index="4">5</li>
+                    <li class="card" data-index="5">6</li>
+                    <li class="card" data-index="6">7</li>
+                </ul>
+        -->
+
+
+
+        <!----------------- SWIPER NEU------------------->
+
+
+        <!-- Swiper -->
+
+        <div class="container ">
+            <div class="row content-row">
+                <div class="col">
+
+                        <h1 class="header-1">Entdecke [App-Name]</h1>
+                        <div class=" swiper-container ">
+
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="search-results.html" class="fill-div">
+                                        <div class="card card-entdecke">
+                                            <img class="card-img-top" src="img/pictures/wochenmarkt.jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title card-title-app">Wochenmärkte</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="search-results.html" class="fill-div">
+                                    <div class="card card-entdecke">
+                                        <img class="card-img-top" src="img/pictures/wochenmarkt.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title card-title-app">Hofläden</h5>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="search-results.html" class="fill-div">
+                                    <div class="card card-entdecke">
+                                        <img class="card-img-top" src="img/pictures/wochenmarkt.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title card-title-app">Bauernläden</h5>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                </div>
+            </div>
+
+
+            <div class="row content-row">
+                <div class="col">
+                    <h1 class="header-1">So kaufst du regional ein</h1>
+                    <div class="content-section">
+                        <p class="content-p">
+                            Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonumy eirmod.
+                        </p>
+                        <img class="img-fluid app-img" src="img/test/traktor.jpg" alt="Card image cap">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="content">
+
+
+
+            <!-- Insert Your Features Here -->
+            
+        </div>
+        <!-- Page Footer-->
+        <div class="footer">
+           <!-- <p class="center-text">Copyright 2015. All rights reserved.</p>-->
+        <!--    <div class="footer-socials half-bottom">
+                <a href="#" class="footer-facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="footer-twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="footer-transparent"></a>
+                <a href="#" class="footer-share show-share-bottom"><i class="fa fa-share-alt"></i></a>
+                <a href="#" class="footer-up"><i class="fa fa-angle-up"></i></a>
+            </div>-->
+        </div>    
+        
+    </div>
+    
+    <div class="share-bottom">
+        <h3>Share Page</h3>
+        <div class="share-socials-bottom">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.themeforest.net/">
+                <i class="fa fa-facebook facebook-color"></i>
+                Facebook
+            </a>
+            <a href="https://twitter.com/home?status=Check%20out%20ThemeForest%20http://www.themeforest.net">
+                <i class="fa fa-twitter twitter-color"></i>
+                Twitter
+            </a>
+            <a href="https://plus.google.com/share?url=http://www.themeforest.net">
+                <i class="fa fa-google-plus google-color"></i>
+                Google
+            </a>
+
+            <a href="https://pinterest.com/pin/create/button/?url=http://www.themeforest.net/&media=https://0.s3.envato.com/files/63790821/profile-image.jpg&description=Themes%20and%20Templates">
+                <i class="fa fa-pinterest-p pinterest-color"></i>
+                Pinterest
+            </a>
+            <a href="sms:">
+                <i class="fa fa-comment-o sms-color"></i>
+                Text
+            </a>
+            <a href="mailto:?&subject=Check this page out!&body=http://www.themeforest.net">
+                <i class="fa fa-envelope-o mail-color"></i>
+                Email
+            </a>
+        </div>
+        <a href="#" class="close-share-bottom">Close</a>
+    </div>
+    
+</div>
+
+
+<script>
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        }
+    });
+
+</script>
+</body>
+

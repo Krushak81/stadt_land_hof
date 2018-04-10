@@ -1,0 +1,309 @@
+<!DOCTYPE HTML><head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/splash/splash-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/splash/splash-icon-big.png">
+    <link rel="apple-touch-startup-image" href="img/splash/splash-screen.png" 	media="screen and (max-device-width: 320px)" />
+    <link rel="apple-touch-startup-image" href="img/splash/splash-screen@2x.png" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="img/splash/splash-screen-six.png" media="(device-width: 375px)">
+    <link rel="apple-touch-startup-image" href="img/splash/splash-screen-six-plus.png" media="(device-width: 414px)">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
+
+
+
+    <title>Regionale Suche</title>
+
+
+
+
+
+    <link href="css/style.css"     		 rel="stylesheet" type="text/css">
+    <link href="css/framework.css" 		 rel="stylesheet" type="text/css">
+    <link href="css/bootstrap/bootstrap.min.css" 		 rel="stylesheet" type="text/css">
+    <link href="css/owl.theme.css" 		 rel="stylesheet" type="text/css">
+    <link href="css/swipebox.css"		 rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css"	 rel="stylesheet" type="text/css">
+    <link href="css/animate.css"			 rel="stylesheet" type="text/css">
+    <link href="css/custom.css"			 rel="stylesheet" type="text/css">
+    <link href="css/swiper.css"			 rel="stylesheet" type="text/css">
+
+
+    <!--   Muss noch lokal eingebunden werden!!  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/framework.plugins.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/card-slider.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/searchSuggestions.js"></script>
+
+
+
+
+
+</head>
+<body> 
+
+<div id="preloader">
+	<div id="status">
+    	<p class="center-text">
+			Loading the content...
+            <em>Loading depends on your connection speed!</em>
+        </p>
+    </div>
+</div>
+    
+<div class="hide-content"></div>       
+<div class="all-elements">
+    <div class="snap-drawers">
+        <!-- Left Sidebar -->
+        <div class="snap-drawer snap-drawer-left">
+            <a href="index.html"  class="selected-item"><i class="fa fa-home"></i>Home</a>
+            <a href="#"><i class="fa fa-heart"></i>Favoriten</a>
+            <a href="rezepte.html"><i class="fa fa-book"></i>Rezepte</a>
+            <a href="#"><i class="fa fa-comment"></i>Laden vorschlagen</a>
+            <a href="#"><i class=""></i></a>
+            <a href="#"><i class="fa fa-envelope-o"></i>Kontakt</a>
+            <!-- <a href="#"><i class="fa fa-facebook"></i>Like Us</a>
+             <a href="#"><i class="fa fa-twitter"></i>Follow Us</a>
+             <a href="#"><i class="fa fa-google-plus"></i>Follow us</a>
+             <a href="#" class="show-share-bottom"><i class="fa fa-retweet"></i>Share</a>-->
+            <a href="#" class="sidebar-close"><i class="fa fa-times"></i>Close</a>
+        </div>
+    </div>
+    
+    <div class="header search-results-header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="searchMenu" data-toggle="modal" data-target="#searchModal">
+                        <i class="fa fa-search" id="searchIcon"></i>
+                        <input type="text" ng-model="searchText" id="searchBar" placeholder="Gib z.&nbsp;B. „Offenburg“ ein"/>
+                    </div>
+                    <div id="filterMenu" data-toggle="modal" data-target="#filterModal">
+                        <button class="btn btn-default filter-button" data-filter="filter">Filter</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------Filter-Modal------------------->
+
+    <div class="modal fade modal-fullscreen footer-to-bottom search-modal force-fullscreen" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog search-modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="row search-modal-header">
+                    <div class="col search-modal-col search-modal-col-left">
+                        <button type="button" class="search-modal-close-button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="col search-modal-col search-modal-col-center">
+                        <div class="search-modal-title">
+                            <span>Filter</span>
+                        </div>
+                    </div>
+                    <div class="col search-modal-col search-modal-col-right">
+                        <div class="search-modal-title">
+                            <button type="button" class="search-modal-delete" aria-disabled="false" aria-busy="false">
+                                <span>Löschen</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>-->
+                <div class="modal-body">
+                    <div class="test">
+                        <form action="search-results.html" method="get">
+                            <label class="search-label" for="SearchBarLocations">Reiseziel</label>
+                            <div dir="ltr">
+                                <div class="search-modal-searchbar_1">
+                                    <div class="search-modal-searchbar_2">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-----------------Search-Modal------------------->
+
+    <div class="modal fade bottom search-modal" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog search-modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="row search-modal-header">
+                    <div class="col search-modal-col search-modal-col-left">
+                        <button type="button" class="search-modal-close-button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="col search-modal-col search-modal-col-center" id="">
+                        <div class="search-modal-title">
+                            <span>Regionale Suche</span>
+                        </div>
+                    </div>
+                    <div class="col search-modal-col search-modal-col-right">
+                        <div class="search-modal-title">
+                            <button type="button" class="search-modal-delete" aria-disabled="false" aria-busy="false">
+                                <span>Löschen</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>-->
+                <div class="modal-body">
+                    <div class="test">
+                        <form action="search-results.html" method="get">
+                            <label class="search-label" for="SearchBarLocations">Reiseziel</label>
+                            <div dir="ltr">
+                                <div class="search-modal-searchbar_1">
+                                    <div class="search-modal-searchbar_2">
+                                        <input type="text" autocomplete="on" class="typeahead search-modal-searchbar-text" id="SearchBarLocations" name="query" placeholder="Gib z.&nbsp;B. „Offenburg“ ein" value="" autofocus>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <a href="#" class="footer-ball"><i class="fa fa-navicon"></i></a>
+    
+    <!-- Page Content-->
+    <div id="content" class="snap-content">        
+        <div class="header-clear"></div>
+
+        <div class="container ">
+            <div class="row content-row">
+                <div class="col">
+                    <h1 class="header-1">Suchergebnisse</h1>
+
+
+                    <div class="card search-result-card no-margin-top">
+                        <a href="location-detail.html" class="fill-div">
+                            <div class="search-result-card-img-box">
+                                <img src="img/test/spargelhof.jpg" class="search-result-card-img">
+                                <div class="card-img-container location">
+                                <span class="text">
+                                    <p>1,2</p>
+                                    <p>Km</p>
+                                </span>
+                                </div>
+                            </div>
+                            <div class="search-result-card-body card-body">
+                                <h1 class="header-1">Spargelhof</h1>
+                                <div class="content-section">
+                                    <p class="content-p">
+                                        Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonumy eirmod.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card search-result-card">
+                        <a href="location-detail.html" class="fill-div">
+                            <div class="search-result-card-img-box">
+                                <img src="img/test/spargelhof.jpg" class="search-result-card-img">
+                                <div class="card-img-container location">
+                                <span class="text">
+                                    <p>2</p>
+                                    <p>Km</p>
+                                </span>
+                                </div>
+                            </div>
+                            <div class="search-result-card-body card-body">
+                                <h1 class="header-1">Spargelhof</h1>
+                                <div class="content-section">
+                                    <p class="content-p">
+                                        Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonumy eirmod.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card search-result-card">
+                        <a href="location-detail.html" class="fill-div">
+                            <div class="search-result-card-img-box">
+                                <img src="img/test/spargelhof.jpg" class="search-result-card-img">
+                                <div class="card-img-container location">
+                                <span class="text">
+                                    <p>2</p>
+                                    <p>Km</p>
+                                </span>
+                                </div>
+                            </div>
+                            <div class="search-result-card-body card-body">
+                                <h1 class="header-1">Spargelhof</h1>
+                                <div class="content-section">
+                                    <p class="content-p">
+                                        Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonumy eirmod.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content"></div>
+        <!-- Page Footer-->
+        <div class="footer">
+
+        </div>    
+        
+    </div>
+    
+
+</div>
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+</body>
+

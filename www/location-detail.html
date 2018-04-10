@@ -1,0 +1,204 @@
+<!DOCTYPE HTML><head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/splash/splash-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/splash/splash-icon-big.png">
+    <link rel="apple-touch-startup-image" href="img/splash/splash-screen.png" 	media="screen and (max-device-width: 320px)" />
+    <link rel="apple-touch-startup-image" href="img/splash/splash-screen@2x.png" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="img/splash/splash-screen-six.png" media="(device-width: 375px)">
+    <link rel="apple-touch-startup-image" href="img/splash/splash-screen-six-plus.png" media="(device-width: 414px)">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
+
+
+
+    <title>Regionale Suche</title>
+
+
+
+
+
+    <link href="css/style.css"     		 rel="stylesheet" type="text/css">
+    <link href="css/framework.css" 		 rel="stylesheet" type="text/css">
+    <link href="css/bootstrap/bootstrap.min.css" 		 rel="stylesheet" type="text/css">
+    <link href="css/owl.theme.css" 		 rel="stylesheet" type="text/css">
+    <link href="css/swipebox.css"		 rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css"	 rel="stylesheet" type="text/css">
+    <link href="css/animate.css"			 rel="stylesheet" type="text/css">
+    <link href="css/custom.css"			 rel="stylesheet" type="text/css">
+    <link href="css/swiper.css"			 rel="stylesheet" type="text/css">
+
+
+    <!--   Muss noch lokal eingebunden werden!!  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/framework.plugins.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/card-slider.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/searchSuggestions.js"></script>
+
+
+
+
+
+</head>
+<body onload="initMap()">
+
+<div id="preloader">
+	<div id="status">
+    	<p class="center-text">
+			Loading the content...
+            <em>Loading depends on your connection speed!</em>
+        </p>
+    </div>
+</div>
+    
+<div class="hide-content"></div>       
+<div class="all-elements">
+    <div class="snap-drawers">
+        <!-- Left Sidebar -->
+        <div class="snap-drawer snap-drawer-left">
+            <a href="index.html"  class="selected-item"><i class="fa fa-home"></i>Home</a>
+            <a href="#"><i class="fa fa-heart"></i>Favoriten</a>
+            <a href="rezepte.html"><i class="fa fa-book"></i>Rezepte</a>
+            <a href="#"><i class="fa fa-comment"></i>Laden vorschlagen</a>
+            <a href="#"><i class=""></i></a>
+            <a href="#"><i class="fa fa-envelope-o"></i>Kontakt</a>
+            <!-- <a href="#"><i class="fa fa-facebook"></i>Like Us</a>
+             <a href="#"><i class="fa fa-twitter"></i>Follow Us</a>
+             <a href="#"><i class="fa fa-google-plus"></i>Follow us</a>
+             <a href="#" class="show-share-bottom"><i class="fa fa-retweet"></i>Share</a>-->
+            <a href="#" class="sidebar-close"><i class="fa fa-times"></i>Close</a>
+        </div>
+    </div>
+    
+
+    <a href="#" class="footer-ball"><i class="fa fa-navicon"></i></a>
+    
+    <!-- Page Content-->
+    <div id="content" class="location-content">
+
+        <div class="detail-top">
+            <div class="detail-img-box">
+                <img src="img/test/spargelhof.jpg" class="detail-img">
+                <div class="detail-img-container location">
+                    <span class="text">
+                        <p>1,2</p>
+                        <p>Km</p>
+                    </span>
+                    <div onclick="history.back()"><span class="fa fa-arrow-left back-arrow-span"></span></div>
+                    <span class="fa fa-heart heart-span-empty"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container ">
+            <div class="row content-row">
+                <div class="col">
+
+                    <h1 class="header-1">Spargel Hof</h1>
+
+
+                    <div class="row content-row ">
+                        <div  class="location-info-1">
+                            <i class="fa fa-home"></i><p class="detail-info-blocks">Badstr. 15, 77652 Offenburg</p>
+                        </div>
+                        <div  class="location-info-1">
+                            <i class="fa fa-phone"></i><p class="detail-info-blocks">+49 7811 2547 8</p>
+                        </div>
+                        <div  class="location-info-1">
+                            <i class="fa fa-envelope"></i><p class="detail-info-blocks">spargelhof@info.de</p>
+                        </div>
+                    </div>
+
+                    <div class="spacer">
+                        <div class="spacer-line"></div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="heading-Two" role="tab">
+                            <h4 class="panel-title">
+                                <a aria-expanded="true" aria-controls="Two" href="#category" data-toggle="collapse">
+                                    Kategorien
+                                </a>
+                                <span class="badge"><i class="fa fa-arrow-down"></i></span>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse in container" id="category" role="tabpanel" aria-expanded="true" aria-labelledby="heading-Two">
+                            <div class="list-group row">
+                                <div class="list-group-item col-sm-3 category-list-text"><span class="badge category-list-icon"><i class="fa fa-shopping-bag"></i></span>Spargel</div>
+                                <div class="list-group-item col-sm-3 category-list-text"><span class="badge category-list-icon"><i class="fa fa-shopping-bag"></i></span>Gemüse</div>
+                                <div class="list-group-item col-sm-3 category-list-text"><span class="badge category-list-icon"><i class="fa fa-shopping-bag"></i></span>Obst</div>
+                                <div class="list-group-item col-sm-3 category-list-text"><span class="badge category-list-icon"><i class="fa fa-shopping-bag"></i></span>Milchprodukte</div>
+                                <div class="list-group-item col-sm-3 category-list-text"><span class="badge category-list-icon"><i class="fa fa-shopping-bag"></i></span>Nudeln & Teigwaren</div>
+                                <div class="list-group-item col-sm-3 category-list-text"><span class="badge category-list-icon"><i class="fa fa-shopping-bag"></i></span>Aufstriche</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spacer">
+                        <div class="spacer-line"></div>
+                    </div>
+
+                    <div class="sub-header-1">Öffnungszeiten</div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex open-time-group">
+                            <div class="col-4 open-time-corner time-left">Montag</div>
+                            <div class="col-8 open-time-corner time-right">09:00 - 13:00 | 14:30 - 18:00</div>
+                        </li>
+                        <li class="list-group-item d-flex open-time-group">
+                            <div class="col-4 open-time-corner time-left">Dienstag</div>
+                            <div class="col-8 open-time-corner time-right">09:00 - 13:00 | 14:30 - 18:00</div>
+                        </li>
+                        <li class="list-group-item d-flex open-time-group">
+                            <div class="col-4 open-time-corner time-left">Mittwoch</div>
+                            <div class="col-8 open-time-corner time-right">09:00 - 13:00 | 14:30 - 18:00</div>
+                        </li>
+                        <li class="list-group-item d-flex open-time-group">
+                            <div class="col-4 open-time-corner time-left">Donnerstag</div>
+                            <div class="col-8 open-time-corner time-right">09:00 - 13:00 | 14:30 - 18:00</div>
+                        </li>
+                        <li class="list-group-item d-flex open-time-group">
+                            <div class="col-4 open-time-corner time-left">Freitag</div>
+                            <div class="col-8 open-time-corner time-right">09:00 - 13:00 | 14:30 - 18:00</div>
+                        </li>
+                        <li class="list-group-item d-flex open-time-group">
+                            <div class="col-4 open-time-corner time-left">Samstag</div>
+                            <div class="col-8 open-time-corner time-right">09:00 - 14:00</div>
+                        </li>
+                    </ul>
+
+
+                    <div class="spacer">
+                        <div class="spacer-line"></div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="no-padding">
+            <div id="map" class="location-map" ></div>
+        </div>
+        <div class="content"></div>
+        <!-- Page Footer-->
+        <div class="footer">
+
+        </div>    
+        
+    </div>
+    
+
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+<script type="text/javascript" src="js/maps.js"></script>
+
+</body>
+
