@@ -38,10 +38,6 @@
     <script type="text/javascript" src="js/swiper.min.js"></script>
     <script type="text/javascript" src="js/searchSuggestions.js"></script>
 
-
-
-
-
 </head>
 <body> 
 
@@ -70,8 +66,7 @@
     </div>
 
 
-
-    <div class="header search-results-header">
+    <div class="header">
         <div class="container">
             <div class="row">
                 <div class="col-2">
@@ -80,119 +75,22 @@
                     </div>
                 </div>
                 <div class="col-10">
-                    <div id="searchMenu" data-toggle="modal" data-target="#searchModal">
-                        <i class="fa fa-search" id="searchIcon"></i>
-                        <input type="text" ng-model="searchText" id="searchBar" placeholder="Gib z.&nbsp;B. „Offenburg“ ein"/>
-                    </div>
-                    <div id="filterMenu" data-toggle="modal" data-target="#filterModal">
-                        <button class="btn btn-default filter-button" data-filter="filter">Filter</button>
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <!-----------------Filter-Modal------------------->
-
-    <div class="modal fade modal-fullscreen footer-to-bottom search-modal force-fullscreen" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog search-modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="row search-modal-header">
-                    <div class="col search-modal-col search-modal-col-left">
-                        <button type="button" class="search-modal-close-button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="col search-modal-col search-modal-col-center">
-                        <div class="search-modal-title">
-                            <span>Filter</span>
-                        </div>
-                    </div>
-                    <div class="col search-modal-col search-modal-col-right">
-                        <div class="search-modal-title">
-                            <button type="button" class="search-modal-delete" aria-disabled="false" aria-busy="false">
-                                <span>Löschen</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="test">
-                        <form action="search-results.html" method="get">
-                            <label class="search-label" for="SearchBarLocations">Reiseziel</label>
-                            <div dir="ltr">
-                                <div class="search-modal-searchbar_1">
-                                    <div class="search-modal-searchbar_2">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-----------------Search-Modal------------------->
-
-    <div class="modal fade bottom search-modal" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog search-modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="row search-modal-header">
-                    <div class="col search-modal-col search-modal-col-left">
-                        <button type="button" class="search-modal-close-button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="col search-modal-col search-modal-col-center" id="">
-                        <div class="search-modal-title">
-                            <span>Regionale Suche</span>
-                        </div>
-                    </div>
-                    <div class="col search-modal-col search-modal-col-right">
-                        <div class="search-modal-title">
-                            <button type="button" class="search-modal-delete" aria-disabled="false" aria-busy="false">
-                                <span>Löschen</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="test">
-                        <form action="search-results.html" method="get">
-                            <label class="search-label" for="SearchBarLocations">Reiseziel</label>
-                            <div dir="ltr">
-                                <div class="search-modal-searchbar_1">
-                                    <div class="search-modal-searchbar_2">
-                                        <input type="text" autocomplete="on" class="typeahead search-modal-searchbar-text" id="SearchBarLocations" name="query" placeholder="Gib z.&nbsp;B. „Offenburg“ ein" value="" autofocus>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    
     <a href="#" class="footer-ball"><i class="fa fa-navicon"></i></a>
     
     <!-- Page Content-->
     <div id="content" class="snap-content">        
-        <div class="header-clear"></div>
+        <div class="header-clear-recipes"></div>
 
         <div class="container ">
             <div class="row content-row">
                 <div class="col">
-                    <h1 class="header-1">Suchergebnisse</h1>
+                    <h1 class="header-1">Favoriten</h1>
 
 
                     <div class="card search-result-card no-margin-top">
@@ -265,11 +163,27 @@
             </div>
         </div>
 
+        <div class="content"></div>
         <!-- Page Footer-->
-        <div class="footer"></div>
+        <div class="footer">
+
+        </div>    
+        
     </div>
+    
 
 </div>
 
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
 </body>
 
