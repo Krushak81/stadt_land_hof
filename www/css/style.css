@@ -42,7 +42,6 @@ body{
 	position:absolute;
 	overflow-x:hidden!important;
 	width:100%;
-	max-width:  450px;
 	height:100%;
 	min-height:100%;
 	max-height:100%;
@@ -54,22 +53,22 @@ body{
 /*Backgrounds */
 
 .bg1{
-    background-image:url(../images/pictures/1.jpg);   
+    background-image:url(img/pictures/1.jpg);   
     background-position:center center;
 }
 
 .bg2{
-    background-image:url(../images/pictures/2.jpg);   
+    background-image:url(img/pictures/2.jpg);   
     background-position:center center;
 }
 
 .bg3{
-    background-image:url(../images/pictures/3.jpg);   
+    background-image:url(img/pictures/3.jpg);   
     background-position:center center;
 }
 
 .bg4{
-    background-image:url(../images/pictures/4.jpg);   
+    background-image:url(img/pictures/4.jpg);   
     background-position:center center;
 }
 
@@ -220,7 +219,7 @@ body{
 .footer-menu{
     position:fixed;
     z-index:9999999;
-    background-image:url(../images/misc/menu-bg.png);
+    background-image:url(img/misc/menu-bg.png);
     background-size:100px 100px;
     width:100%;
     height:60px;
@@ -272,7 +271,7 @@ body{
 }
 
 .header{
-    /* position:fixed; */
+    position:fixed;
     pointer-events:all;
     z-index: 1000;
     background-color:#FFFFFF;
@@ -288,6 +287,12 @@ body{
 .header-clear{
     height: 70px;
 }
+
+
+.header-clear-recipes{
+    height: 30px;
+}
+
 
 .header a:hover{
     color:#1f1f1f;
@@ -308,7 +313,7 @@ body{
 }
 
 .main-logo{
-    background-image:url(../images/logo-dark.png);
+    background-image:url(img/logo-dark.png);
     width:110px;
     height:18px;
     background-size:110px 18px;
@@ -730,14 +735,14 @@ body{
 /*Reminder Box*/
 
 .reminder-check-square{
-    background-image:url(../images/ui/checkbox1.png);
+    background-image:url(img/ui/checkbox1.png);
     background-repeat:no-repeat;
     background-size:16px 18px;
     background-position:10px 43px;
 }
 
 .reminder-check-round{
-    background-image:url(../images/ui/radio2.png);
+    background-image:url(img/ui/radio2.png);
     background-repeat:no-repeat;
     background-size:16px 18px;
     background-position:10px 43px;
@@ -748,11 +753,11 @@ body{
 }
 
 .reminder-check-square-selected{
-    background-image:url(../images/ui/checkbox1c.png);
+    background-image:url(img/ui/checkbox1c.png);
 }
 
 .reminder-check-round-selected{
-    background-image:url(../images/ui/radio2c.png);
+    background-image:url(img/ui/radio2c.png);
 }
 
 .reminder-check-square-selected em{opacity:0.5; transition:all 250ms ease;}
@@ -788,7 +793,7 @@ body{
 .checklist-square{
     font-size:14px;
     font-weight:500;
-    background-image:url(../images/ui/checkbox1.png);
+    background-image:url(img/ui/checkbox1.png);
     background-size:16px 18px;
     background-position:0px 32px;
     background-repeat:no-repeat;
@@ -811,7 +816,7 @@ body{
 }
 
 .checklist-square-selected{
-    background-image:url(../images/ui/checkbox1c.png);
+    background-image:url(img/ui/checkbox1c.png);
     text-decoration:line-through;
     opacity:0.5;
     transition:all 250ms ease;
@@ -820,7 +825,7 @@ body{
 .checklist-round{
     font-size:14px;
     font-weight:500;
-    background-image:url(../images/ui/radio1.png);
+    background-image:url(img/ui/radio1.png);
     background-size:16px 18px;
     background-position:0px 32px;
     background-repeat:no-repeat;
@@ -843,7 +848,7 @@ body{
 }
 
 .checklist-round-selected{
-    background-image:url(../images/ui/radio1c.png);
+    background-image:url(img/ui/radio1c.png);
     text-decoration:line-through;
     opacity:0.5;
     transition:all 250ms ease;
@@ -895,4 +900,4 @@ body{
 
 
 
-
+

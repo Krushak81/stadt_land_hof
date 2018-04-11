@@ -9,6 +9,15 @@ body{
     padding-left: 20px;
 }
 
+.button-back{
+    align-content:  center;
+    width:  100%;
+    height: 100%;
+    font-size: 2rem;
+    margin: 0.8rem;
+
+}
+
 .top-entdecke{
     margin-top: 30px;
 }
@@ -18,6 +27,8 @@ body{
     position: relative;
     padding-top: 15px;
     padding-bottom: 15px;
+    display: inline-block;
+    width: 100%;
 }
 #searchMenu #searchBar {
     color: #929292;
