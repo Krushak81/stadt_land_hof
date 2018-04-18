@@ -1,14 +1,16 @@
 <!DOCTYPE HTML><head>
 
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1" />
 
-    <!--<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/splash/splash-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/splash/splash-icon.png">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/splash/splash-icon-big.png">
     <link rel="apple-touch-startup-image" href="img/splash/splash-screen.png" 	media="screen and (max-device-width: 320px)" />
     <link rel="apple-touch-startup-image" href="img/splash/splash-screen@2x.png" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" />
     <link rel="apple-touch-startup-image" href="img/splash/splash-screen-six.png" media="(device-width: 375px)">
-    <link rel="apple-touch-startup-image" href="img/splash/splash-screen-six-plus.png" media="(device-width: 414px)">-->
+    <link rel="apple-touch-startup-image" href="img/splash/splash-screen-six-plus.png" media="(device-width: 414px)">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
 
@@ -32,14 +34,12 @@
     <!--<script type="text/javascript" src="js/jquery.js"></script>-->
 
     <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/framework.plugins.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/card-slider.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
     <script type="text/javascript" src="js/searchSuggestions.js"></script>
-
-
-
 
 
 </head>
@@ -97,7 +97,7 @@
     <div class="modal fade modal-fullscreen footer-to-bottom search-modal force-fullscreen" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog search-modal-dialog" role="document">
             <div class="modal-content">
-                <div class="row search-modal-header">
+                <div class="search-modal-header">
                     <div class="col search-modal-col search-modal-col-left">
                         <button type="button" class="search-modal-close-button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
@@ -117,20 +117,159 @@
                     </div>
                 </div>
 
-                <div class="modal-body">
-                    <div class="test">
-                        <form action="search-results.html" method="get">
-                            <label class="search-label" for="SearchBarLocations">Reiseziel</label>
-                            <div dir="ltr">
-                                <div class="search-modal-searchbar_1">
-                                    <div class="search-modal-searchbar_2">
+                <div class="modal-body filter-modal-body">
+                    <div class="row">
 
+                        <div class="filter-row">
+                            <div class="filter-container">
+                                <div class="filter-col">
+                                    <div class="header-2">
+                                        Sofort buchen
+                                    </div>
+                                    <div class="filter-subtext">
+                                        <span>
+                                            Inserate, die du buchen kannst, ohne auf eine Bestätigung des Gastgebers zu warten
+                                        </span>
                                     </div>
                                 </div>
+                                <div class="filter-col">
+                                    <div class="toggle-btn">
+                                        <input type="checkbox"  checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
+                                </div>
+
                             </div>
-                        </form>
+
+                        </div>
+
+                        <div class="filter-row">
+                            <div class="filter-container">
+                                <div class="filter-col">
+                                    <div class="header-2">
+                                        Sofort buchen
+                                    </div>
+                                    <div class="filter-subtext">
+                                        <span>
+                                            Inserate, die du buchen kannst, ohne auf eine Bestätigung des Gastgebers zu warten
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="filter-col">
+                                    <div class="toggle-btn">
+                                        <input type="checkbox"  checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="filter-row">
+                            <div class="filter-container">
+                                <div class="filter-col">
+                                    <div class="header-2">
+                                        Sofort buchen
+                                    </div>
+                                    <div class="filter-subtext">
+                                        <span>
+                                            Inserate, die du buchen kannst, ohne auf eine Bestätigung des Gastgebers zu warten
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="filter-col">
+                                    <div class="toggle-btn">
+                                        <input type="checkbox"  checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="filter-row">
+                            <div class="filter-container">
+                                <div class="filter-col">
+                                    <div class="header-2">
+                                        Sofort buchen
+                                    </div>
+                                    <div class="filter-subtext">
+                                        <span>
+                                            Inserate, die du buchen kannst, ohne auf eine Bestätigung des Gastgebers zu warten
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="filter-col">
+                                    <div class="toggle-btn">
+                                        <input type="checkbox"  checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="filter-row">
+                            <div class="filter-container">
+                                <div class="filter-col">
+                                    <div class="header-2">
+                                        Sofort buchen
+                                    </div>
+                                    <div class="filter-subtext">
+                                        <span>
+                                            Inserate, die du buchen kannst, ohne auf eine Bestätigung des Gastgebers zu warten
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="filter-col">
+                                    <div class="toggle-btn">
+                                        <input type="checkbox"  checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="filter-row">
+                            <div class="filter-container">
+                                <div class="filter-col">
+                                    <div class="header-2">
+                                        Sofort buchen
+                                    </div>
+                                    <div class="filter-subtext">
+                                        <span>
+                                            Inserate, die du buchen kannst, ohne auf eine Bestätigung des Gastgebers zu warten
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="filter-col">
+                                    <div class="toggle-btn">
+                                        <input type="checkbox"  checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
+
                 </div>
+                <form action="search-results.html" method="post">
+                    <div class="filter-modal-body-footer">
+                        <label class="search-label" for="SearchFilterLocations">Regionale Geschäfte</label>
+                        <button type="submit" class="filter-modal-body-footer-button" aria-busy="false" id="SearchFilterLocations">
+                                <span class="filter-modal-body-footer-span">
+                                    <span>Geschäfte anzeigen</span>
+                                </span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -142,7 +281,7 @@
     <div class="modal fade bottom search-modal" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog search-modal-dialog" role="document">
             <div class="modal-content">
-                <div class="row search-modal-header">
+                <div class="search-modal-header">
                     <div class="col search-modal-col search-modal-col-left">
                         <button type="button" class="search-modal-close-button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
@@ -161,7 +300,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="modal-body">
                     <div class="test">
                         <form action="search-results.html" method="get">
@@ -176,6 +314,7 @@
                         </form>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -193,7 +332,6 @@
             <div class="row content-row">
                 <div class="col">
                     <h1 class="header-1">Suchergebnisse</h1>
-
 
                     <div class="card search-result-card no-margin-top">
                         <a href="location-detail.html" class="fill-div">

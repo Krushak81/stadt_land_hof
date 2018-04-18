@@ -117,7 +117,7 @@ body{
     position:fixed;
     line-height:50px;
     z-index: 1000;
-    bottom:32px;
+    bottom: 15px;
     left:50%;
     margin-left:-27px;
     background-color:#d34836;
